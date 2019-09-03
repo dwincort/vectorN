@@ -1,0 +1,56 @@
+cabal-version: 2.2
+
+name:           vectorN
+version:        0.0.0.1
+synopsis:       Vectors for multi-dimensional data
+description:    A wrapper around the vector library that allows for multi-dimensional
+                functionality and an expanded set of index types.
+category:       Simulation
+homepage:       https://github.com/dwincort/vectorN
+author:         Daniel Winograd-Cort
+maintainer:     Daniel.Winograd-Cort <dwincort@gmail.com>
+build-type:     Simple
+
+library
+  exposed-modules:
+    Data.Vector1
+    Data.Vector1.Mutable
+    Data.Vector1.Unboxed
+    Data.Vector1.Unboxed.Mutable
+    Data.Vector2
+    Data.Vector2.Mutable
+    Data.Vector2.Unboxed
+    Data.Vector2.Unboxed.Mutable
+    Data.Vector3
+    Data.Vector3.Mutable
+    Data.Vector3.Unboxed
+    Data.Vector3.Unboxed.Mutable
+  hs-source-dirs: src/
+  default-extensions:
+    BangPatterns
+    DeriveFoldable
+    DeriveFunctor
+    DeriveGeneric
+    DeriveTraversable
+    DuplicateRecordFields
+    NamedFieldPuns
+    RankNTypes
+    RecordWildCards
+    ScopedTypeVariables
+    TupleSections
+    TypeApplications
+    TypeOperators
+    UnicodeSyntax
+    ViewPatterns
+  ghc-options:
+    -O2
+    -Wall
+    -Wno-name-shadowing
+    -Wno-type-defaults
+  build-depends:
+      base
+    , deepseq
+    , primitive
+    , semigroupoids
+    , vector
+  default-language: Haskell2010
